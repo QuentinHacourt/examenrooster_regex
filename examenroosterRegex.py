@@ -1,15 +1,15 @@
 import re
 
-with open('lol.txt', 'r') as examenText:
+with open('rooster.txt', 'r') as examenText:
     text = examenText.read()
 
-examenRegex = re.compile(r'.*r0652542.*')
+examenRegex = re.compile(r'.*[vervang dit door uw studentennummer].*')
 
 
 matches = re.findall(examenRegex, text)
 
 
-f = open('lol.txt','w')
+f = open('rooster.txt','w')
 
 spacieRegex = re.compile(r'\\t')
 for i in matches:
